@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("JavaScript tutorial 3: var, let and const")
+        // var a = 45;
+        // var a = "p"
+       // let b = "Harry";
+       // const author = "Harry"
+        //author = 5 // Throws an error because constant cannot be changed
+       // b = 4
+       // const harry = 0;
+        //let c = null
+       // let d  = undefined  
+       // {
+        //  let b = 'this'
+         // console.log(b)
+       // }//
+        //console.log(b);
+/*
+        var n =10;
+        var n = 20;
+        console.log(n)
+        let na = 10;
+         na = 30;
+        console.log(na)
+        const nam = 20;
+        nam = 40; -->
+        <!-- console.log(nam) -->
+
+*/
+
+        var a = 10;
+        var  a= 20;
+        console.log(a);
+       
+       
+        let b = 11;
+       b = 12;
+        console.log(b)
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- JavaScript mein var, let, aur const teeno keywords ka use variables declare karne ke liye kiya jata hai. Lekin inmein kuch important differences hain jo aapko samajhne chahiye. Chaliye, har ek ko detail mein samajhte hain:
+
+1. var:
+Purana (Old) Method: var JavaScript mein pehle se available tha (ES5 aur usse pehle). 
+Lekin ismein kuch problems bhi the, isliye ES6 ke baad let aur const ka use zyada prefer kiya gaya.
+
+Scope: var ki scope function ya global hoti hai. Matlab agar aap var ko function ke bahar declare karte hain, to wo global scope mein chala jata hai.
+ Agar aap function ke andar declare karte hain, to wo us function ke andar hi valid hota hai.
+Hoisting: var ko hoisted (top par le aata) kiya jata hai.
+ Matlab agar aap variable ko use karne se pehle usse declare karte hain, 
+ to bhi koi error nahi aayega, lekin variable ki value undefined hogi. -->
+
+
+
+<!-- ======================================================================================= -->
+
+<!-- let:
+Modern Way: let ko ES6 (ECMAScript 2015) mein introduce kiya gaya tha aur ab zyada use hota hai. 
+var ke comparison mein, let zyada flexible aur reliable hai.
+Scope: let ki scope block-level hoti hai, matlab agar aap let ko kisi block (jaise loop ya if statement) ke andar declare karte hain,
+to wo sirf us block ke andar valid hota hai.
+
+
+
+Hoisting: let ko bhi hoisted kiya jata hai, lekin ismein ek catch hai. Agar aap variable ko declare karne se pehle use karte hain, to aapko ReferenceError milega.
+
+let name = "Harry"; // block scope
+function test() {
+  let age = 25; // block scope
+}
+console.log(name); // "Harry"
+console.log(age); // Error: age is not defined (because it's inside the function) -->
+
+
+<!-- Hoisting Example:
+ 
+console.log(x); // ReferenceError: Cannot access 'x' before initialization
+let x = 10;
+console.log(x); // 10 -->
+<!-- ============================================================================ -->
+
+<!-- 
+const:
+Constant Variable: const ka use constant values ko declare karne ke liye kiya jata hai. 
+Ek baar const ke saath variable declare karne ke baad, aap uski value ko change nahi kar sakte.
+Scope: const ki scope bhi block-level hoti hai, jaise let.
+Hoisting: const ko bhi hoisted kiya jata hai, aur aapko ReferenceError milega agar aap variable ko declare karne se pehle access karne ki koshish karte hain.
+
+
+
+const name = "Harry";
+// name = "Ron"; // Error: Assignment to constant variable.
+
+
+
+console.log(x); // ReferenceError: Cannot access 'x' before initialization
+const x = 10;
+console.log(x); // 10 -->
+
+
+
+
+
+<!-- =========================== MAJOR DIFFERENCE ======================================= -->
+ <!-- var a = 10;
+ var  a= 20;
+ cnosole.log(a);
+
+
+ let b = 11;
+ letb = 12;
+ console.log(b) -->
