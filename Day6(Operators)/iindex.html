@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 77;
+// "Harry bhai"
+// false
+console.log("Operators in Js")
+// Arithmetic Operators 
+let a = 10;
+let b = 4;
+console.log("a + b = ", a + b)
+console.log("a - b = ", a - b)
+console.log("a / b = ", a / b)
+console.log("a ** b = ", a ** b)
+console.log("a % b = ", a % b)
+console.log("++a = ", ++a)
+console.log("a++ = ", a++)
+console.log("--a = ", --a)
+console.log("a-- = ", a--)
+console.log("a = ", a)
+console.log("a-- = ", a--)
+
+// Assignment Operators 
+let assignment = 1;
+assignment += 5 // same as assignment = assignment + 5
+console.log("a is now = ", a)
+assignment -= 5 // same as assignment = assignment - 5
+console.log("a is now = ", a)
+assignment *= 5 // same as assignment = assignment * 5
+console.log("a is now = ", a)
+assignment /= 5 // same as assignment = assignment / 5
+console.log("a is now = ", a)
+
+// Comparison Operators 
+let comp1 = 6;
+let comp2 = 7;
+console.log("comp1 == comp2 is ", comp1 == comp2)
+console.log("comp1 != comp2 is ", comp1 != comp2)
+console.log("comp1 === comp2 is ", comp1 === comp2)
+console.log("comp1 !== comp2 is ", comp1 !== comp2)
+console.log("comp1 > comp2 is ", comp1 > comp2)
+
+// Logical Operators
+let x = 5;
+let y = 6;
+console.log(x<y && x==5)
+console.log(x>y || x==5)
+console.log(!false)
+console.log(!true)
+
+// Comments
+// This is a single line comment
+/* This is a sample multiline comment and a tutorial
+from 
+codewithharry */
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+JavaScript mein operators wo symbols ya keywords hote hain jo kisi specific action ko perform karte hain, jaise addition, subtraction, comparison, ya logical operations. Inhe aap values ya variables ke saath use karte hain. JavaScript mein kai tarah ke operators hote hain, aur unka use alag-alag purposes ke liye hota hai. Chaliye, sabse common operators ko samajhte hain:
+
+1. Arithmetic Operators (गणितीय ऑपरेटर):
+
+Ye operators basic mathematical calculations ke liye use hote hain.
+
++ (Addition): Do numbers ko add karta hai.
+
+ 
+let result = 5 + 3; // result = 8
+
+==============================================================================
+- (Subtraction): Ek number ko doosre number se subtract karta hai.
+
+=================================================================================
+let result = 5 - 3; // result = 2
+* (Multiplication): Do numbers ko multiply karta hai.
+
+javascript
+Copy
+let result = 5 * 3; // result = 15
+/ (Division): Ek number ko doosre number se divide karta hai.
+
+javascript
+Copy
+let result = 6 / 3; // result = 2
+% (Modulus): Division ke baad remainder (bacha hua hissa) deta hai.
+
+javascript
+Copy
+let result = 5 % 3; // result = 2
+++ (Increment): Variable ki value ko ek se badha deta hai.
+
+javascript
+Copy
+let x = 5;
+x++; // x = 6
+-- (Decrement): Variable ki value ko ek se ghata deta hai.
+
+javascript
+Copy
+let x = 5;
+x--; // x = 4
+2. Assignment Operators (असाइनमेंट ऑपरेटर):
+Ye operators kisi variable ko ek value assign karne ke liye use hote hain.
+
+=: Ek variable ko value assign karta hai.
+
+javascript
+Copy
+let x = 10; // x ko 10 assign kiya
++=: Current value mein specified value ko add kar ke new value assign karta hai.
+
+javascript
+Copy
+let x = 5;
+x += 3; // x = 8
+-=: Current value mein specified value ko subtract karke new value assign karta hai.
+
+javascript
+Copy
+let x = 5;
+x -= 3; // x = 2
+*=: Current value mein specified value ko multiply karke new value assign karta hai.
+
+javascript
+Copy
+let x = 5;
+x *= 3; // x = 15
+/=: Current value mein specified value se divide karke new value assign karta hai.
+
+javascript
+Copy
+let x = 10;
+x /= 2; // x = 5
+%=: Current value ko specified value se divide kar ke remainder (bacha hissa) assign karta hai.
+
+javascript
+Copy
+let x = 10;
+x %= 3; // x = 1
+3. Comparison Operators (तुलना ऑपरेटर):
+Ye operators do values ko compare karte hain aur result ko true ya false mein return karte hain.
+
+==: Do values ko equal hone ke liye compare karta hai (type ko ignore karke).
+
+javascript
+Copy
+5 == "5"; // true
+===: Do values ko compare karta hai aur unke types bhi match hone chahiye.
+
+javascript
+Copy
+5 === "5"; // false, kyunki ek number hai aur doosra string
+!=: Do values ko not equal hone ke liye compare karta hai.
+
+javascript
+Copy
+5 != 3; // true
+!==: Do values ko not equal hone ke liye compare karta hai, aur unke types bhi alag hone chahiye.
+
+javascript
+Copy
+5 !== "5"; // true
+>: Ek value doosri value se badi hai ya nahi.
+
+javascript
+Copy
+5 > 3; // true
+<: Ek value doosri value se chhoti hai ya nahi.
+
+javascript
+Copy
+5 < 3; // false
+>=: Ek value doosri value se badi ya barabar hai ya nahi.
+
+javascript
+Copy
+5 >= 5; // true
+<=: Ek value doosri value se chhoti ya barabar hai ya nahi.
+
+javascript
+Copy
+5 <= 6; // true
+4. Logical Operators (तार्किक ऑपरेटर):
+Ye operators logical conditions ko check karte hain, jaise AND, OR, NOT.
+
+&& (AND): Agar dono conditions true hain, to true return hota hai.
+
+javascript
+Copy
+true && true; // true
+true && false; // false
+|| (OR): Agar koi bhi ek condition true hai, to true return hota hai.
+
+javascript
+Copy
+true || false; // true
+false || false; // false
+! (NOT): Agar condition true hai, to false return karta hai aur agar condition false hai, to true return karta hai.
+
+javascript
+Copy
+!true; // false
+!false; // true
+5. Ternary Operator (तीन-तरफ़ा ऑपरेटर):
+Ye ek short form hai if-else ka. Ek condition check hoti hai, agar true hai to ek value return hoti hai, agar false hai to doosri value return hoti hai.
+
+Syntax: condition ? valueIfTrue : valueIfFalse
+javascript
+Copy
+let age = 18;
+let canVote = (age >= 18) ? "Yes" : "No";
+console.log(canVote); // "Yes"
+6. Typeof Operator (टाइपऑफ़ ऑपरेटर):
+Ye operator kisi value ka type return karta hai.
+
+Example:
+javascript
+Copy
+typeof 5; // "number"
+typeof "hello"; // "string"
+typeof true; // "boolean"
+typeof undefined; // "undefined"
+7. Unary Operators (यूनरी ऑपरेटर):
+Ye operators ek hi operand (value) ke saath kaam karte hain.
+
++ (Unary Plus): Value ko number mein convert karta hai.
+
+javascript
+Copy
+let x = "5";
+let y = +x; // y = 5 (type converted to number)
+- (Unary Minus): Value ko negative bana deta hai.
+
+javascript
+Copy
+let x = 5;
+let y = -x; // y = -5
+typeof: Variable ya value ka type batata hai.
+
+javascript
+Copy
+let x = 10;
+console.log(typeof x); // "number"
+Summary of Common Operators:
+
+Operator	Type	Example
++	Arithmetic	5 + 3 (8)
+-	Arithmetic	5 - 3 (2)
+*	Arithmetic	5 * 3 (15)
+/	Arithmetic	6 / 3 (2)
+==	Comparison	5 == "5" (true)
+===	Comparison	5 === "5" (false)
+&&	Logical	true && false (false)
+`		`
+!	Logical	!true (false)
+? :	Ternary (Conditional)	(5 > 3) ? "Yes" : "No" (Yes)
+Isse aapko JavaScript ke most common operators ke baare mein idea ho gaya hoga. Agar aapko koi specific operator samajhna ho ya kisi part mein confusion ho to zaroor poochiye! -->
