@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let arr = [1,2,3,4,5,6,7,8,9,10,"Prabhat"];
+       // for(let i=0; i<arr.length; i++){
+            //console.log(arr[i])
+       // }
+       let obj ={
+        name:"Prabhat",
+        class:"12th"
+       }
+ //   for(let k in obj){ // object ke liye for-in-loop ka use kiya jajta hai
+      //  console.log(k , obj[k])
+    //}
+    for (let key of Object.values(obj)) {
+        console.log(key, obj[key]);
+      }
+      
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+javaScript mein for loop, for...in loop, for...of loop, aur forEach loop alag-alag tarah se kaam karte hain. 
+Main har ek ko achhe se explain kar raha hoon:
+
+1. For Loop:
+For Loop ek basic loop hai jo aapko kisi block of code ko multiple times run karne ki suvidha deta hai,
+ jab tak ek certain condition true rehti hai. Isme 3 cheezein hoti hain:
+
+Initialization: Loop ke start mein ek variable ko initial value milti hai.
+Condition: Jab tak yeh condition true hoti hai, tab tak loop chalega.
+Increment/Decrement: Har iteration ke baad counter increase ya decrease hota hai.
+Syntax:
+
+ 
+for (initialization; condition; increment/decrement) {
+    // Code to be executed
+}
+Example:
+
+javascript
+Copy
+for (let i = 0; i < 5; i++) {
+    console.log(i);  // Output: 0, 1, 2, 3, 4
+}
+Isme i ki value 0 se start hoti hai, har baar increment hoti hai (i++) aur jab tak i < 5 hai, loop chal raha hai.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. For...in Loop:
+For...in loop ka use objects ki properties ko iterate karne ke liye kiya jata hai. 
+Yeh loop object ke har property (key) ko access karta hai.
+
+Syntax:
+
+javascript
+Copy
+for (let key in object) {
+    // Code to be executed
+}
+Example:
+
+javascript
+Copy
+let person = { name: "John", age: 30, city: "New York" };
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+// Output:
+// name: John
+// age: 30
+// city: New York
+Isme key object ki property name (like "name", "age", "city") ko represent karta hai.
+Note: for...in loop ko arrays ke liye avoid karna chahiye, kyunki wo array ke index ko as a string treat karta hai.
+
+3. For...of Loop:
+For...of loop ka use arrays aur other iterable objects (jaise strings, sets, maps) ko
+ iterate karne ke liye kiya jata hai.
+  Yeh loop iterable object ke values ko directly access karta hai.
+
+Syntax:
+
+ 
+for (let value of iterable) {
+    // Code to be executed
+}
+Example:
+
+ 
+let fruits = ["apple", "banana", "cherry"];
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+// Output:
+// apple
+// banana
+// cherry
+Isme fruit array ke elements ko represent karta hai, aur hum directly values ko access kar rahe hain.
+Note: for...of loop arrays aur other iterable objects ke liye perfect hai, lekin objects ke liye nahi.
+
+4. forEach Loop:
+forEach ek array method hota hai jo har array element par ek function ko execute 
+karta hai. Yeh function har element ko access karte hue ek callback
+function ko call karta hai.
+
+Syntax:
+
+javascript
+Copy
+array.forEach(function(element, index, array) {
+    // Code to be executed
+});
+element: Current array element.
+index: Current element ka index.
+array: Original array.
+Example:
+
+javascript
+Copy
+let numbers = [1, 2, 3, 4];
+numbers.forEach(function(num) {
+    console.log(num);
+});
+// Output:
+// 1
+// 2
+// 3
+// 4
+Ya, arrow function ka use karke bhi likh sakte hain:
+
+javascript
+Copy
+numbers.forEach(num => console.log(num));
+Note: forEach loop sirf arrays ke liye kaam karta hai, aur yeh loop break ya continue ke saath use nahi kiya ja sakta (for a loop termination).
+
+Comparison:
+Loop Type	 Purpose	Works On	Example Use Case
+for loop	Standard loop for repetitive tasks	Arrays, Numbers	Loop through numbers or arrays in a controlled manner
+for...in loop	Object ke properties ko iterate karne ke liye	Objects	Looping through an object's properties
+for...of loop	Arrays aur iterable objects (strings, maps, sets) ko iterate karne ke liye	Arrays, Strings, Maps, Sets	Looping through values of an iterable object
+forEach	A  element
+Aapko kis loop ke baare mein zyada confusion hai? -->
+
+
+
