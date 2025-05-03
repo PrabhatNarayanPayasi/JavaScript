@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //  let a;
+       // function name() {
+     //       console.log("Name")
+      //  }
+      //  name();
+      //  name(a) same same output aayega dono ka.
+
+
+
+
+       // function name(a){
+        //    console.log(a)
+        //}
+       // name("prabhat");
+       // name("Developer");
+
+
+
+
+     //  let a = 2;
+     //let   name =  () =>{
+      // return a;
+     //   console.log("hello")
+      // }
+      // name();
+
+
+ let a = 8;
+      function name(){
+     
+        console.log("Hello")
+      }
+      name();
+    </script>
+</body>
+</html>
+
+<!-- JavaScript mein functions kaafi important hote hain, 
+aur aapko unhe acche se samajhna zaroori hai.
+JavaScript mein kai tarah ke functions hote hain, jaise regular functions, anonymous functions, arrow functions, 
+etc. Main aapko sabhi basic types aur unke use cases ke saath samjhaunga. -->
+
+
+<!-- -------------------------------------------------- -->
+<!-- 1. Regular Functions (Named Functions)
+ ===================================================
+Yeh sabse basic aur traditional functions hote hain. Inhe hum ek naam de kar define karte hain, aur baad mein us naam se call kar sakte hain.
+
+Syntax:
+ 
+function functionName(parameters) {
+  // function body
+  return result; // optional
+}
+
+Example:
+ 
+function greet(name) {
+  return "Hello, " + name;
+}
+
+console.log(greet("Prabhat")); // Output: Hello, Prabhat -->
+<!-- ========================================================== -->
+<!-- 
+2. Anonymous Functions
+Anonymous functions wo functions hote hain jinke paas koi naam nahi hota. 
+Inhe hum usually variables ya arguments ke andar define karte hain.
+
+Example:
+ 
+let add = function(a, b) {
+  return a + b;
+};
+
+console.log(add(2, 3)); // Output: 5 
+=============================================================================== -->
+
+<!-- 
+3. Arrow Functions
+Arrow functions ES6 mein introduce hue the. 
+Yeh short form mein function likhne ka ek tarika hai. 
+Isme function keyword ki jagah => ka use hota hai. 
+Yeh functions lexical this ko maintain karte hain,  
+ki traditional functions se different hota hai.
+
+Syntax:
+ 
+const functionName = (parameters) => {
+  // function body
+  return result; // optional
+}
+Example:
+
+const multiply = (a, b) => a * b;
+
+console.log(multiply(4, 5)); // Output: 20 
+==================================================================== -->
+
+<!-- 4. Immediately Invoked Function Expression (IIFE)
+IIFE ek aesa function hota hai jo turant call ho jata hai jab wo define hota hai. Yeh function expression hota hai, isliye function ko parentheses mein wrap kiya jata hai, aur phir immediately invoke kiya jata hai.
+
+Syntax:
+ 
+(function() {
+  // function body
+})();
+Example:
+  
+(function() {
+  console.log("I am an IIFE!");
+})(); // Output: I am an IIFE!
+==================================================================== -->
+
+
+
+<!-- 11. Anonymous Function as Arguments (Function as First-Class Objects)
+Functions ko aap arguments ke roop mein bhi pass kar sakte hain. Functions ko first-class objects ke roop mein treat kiya jata hai, yani ki functions ko variables ki tarah pass aur return kiya ja sakta hai.
+
+Example:
+ 
+function processData(data, process) {
+  return process(data);
+}
+
+const result = processData(10, function(x) {
+  return x * 2;
+});
+
+console.log(result); // Output: 20
+=============================================================== -->
+
+
+
+<!-- 8. Higher-order Functions
+
+
+Higher-order functions wo functions hote hain jo dusre functions ko arguments ke 
+roop mein lete hain ya phir unhe return karte hain.
+
+Example:
+javascript
+Copy
+function add(a, b) {
+  return a + b;
+}
+
+function operation(a, b, fn) {
+  return fn(a, b);  // fn is a higher-order function
+}
+
+console.log(operation(5, 3, add)); // Output: 8
+============================================================== -->
