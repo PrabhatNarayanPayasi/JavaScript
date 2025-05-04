@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+
+    //========================Que 1=====================
+    let marks = {
+      coco: 80,
+      harry: 98,
+      rohan: 75
+    }
+    //for(let marks in obj){
+    // console.log(obj[marks])
+    //}
+
+    for (let i = 0; i < Object.keys(marks).length; i++) {
+      console.log("The marks of " + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]]);
+    }
+
+
+
+    //============================== Que 5 ===============================
+    // function mean(n1 , n2 , n3 , n4 , n5){
+    //  let Mean = (n1+n2+n3+n4+n5)/5
+    //  console.log(Mean)
+    //  }
+    // mean(1,2,3,4,5);
+
+    function findMean(num1, num2, num3, num4, num5) {
+      let sum = num1 + num2 + num3 + num4 + num5;
+      let mean = sum / 5;
+      return mean;
+    }
+
+    let result = findMean(10, 20, 30, 40, 50);
+    console.log("The mean of the numbers is " + result);
+
+    // ====================================================Que. 4============================
+    let correctNumber = 9;
+    let coice = prompt("Enter the number you want");
+    let choice = coice.toString();
+    if (correctNumber != choice) {
+      console.log("try again");
+    }
+    else {
+      console.log("Congratulations You entered Correct Number")
+    }
+    //==============================all Questions Solved================================
+  </script>
+</body>
+
+</html>
