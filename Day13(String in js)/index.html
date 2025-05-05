@@ -1,0 +1,108 @@
+<!-- // JavaScript mein Strings, Template Literals, aur Escape Sequences kaafi important concepts hain, jo aapko job-ready hone ke liye achhe se samajhna zaroori hai. Main inko achhe se explain karta hoon:
+
+// 1. Strings in JavaScript:
+// String ek primitive data type hota hai jo characters ka sequence hota hai. JavaScript mein strings ko single quotes ('), double quotes ("), ya backticks (`) ke andar define kiya ja sakta hai.
+
+// Example:
+
+// javascript
+// Copy
+// let str1 = 'Hello, World!';  // Using single quotes
+// let str2 = "JavaScript is awesome!";  // Using double quotes
+// 2. Template Literals in JavaScript:
+// Template literals (ya template strings) JavaScript mein string interpolation aur multi-line strings ke liye use hote hain. Ye backticks (`) ke andar likhe jaate hain.
+
+// Key Features:
+
+// String interpolation: Aap variables ko directly string ke andar include kar sakte ho using ${}.
+// Multi-line strings: Aapko \n ya concatenation ki zarurat nahi padti, aap seedha multiple lines mein likh sakte hain.
+// Example:
+
+// javascript
+// Copy
+// let name = 'Alice';
+// let age = 25;
+
+// // String interpolation
+// let message = `Hello, my name is ${name} and I am ${age} years old.`;
+// console.log(message);
+
+// // Multi-line string
+// let multilineStr = `This is
+// a multi-line
+// string.`;
+// console.log(multilineStr);
+// 3. Escape Sequences in JavaScript:
+// Escape sequences special characters hote hain jo string ke andar certain actions perform karte hain (jaise newline dena, tab dena, quotes ko escape karna, etc.). Yeh backslash (\) ke saath use kiye jaate hain.
+
+// Common Escape Sequences:
+
+// \n : New line
+// \t : Horizontal tab
+// \\ : Backslash (escaping a backslash)
+// \' : Single quote (useful in single-quoted strings)
+// \" : Double quote (useful in double-quoted strings)
+// \r : Carriage return (moves cursor to the beginning of the line)
+// Example:
+
+// javascript
+// Copy
+// let stringWithNewline = "Hello\nWorld!";
+// console.log(stringWithNewline);
+// // Output:
+// // Hello
+// // World!
+
+// let stringWithTab = "Hello\tWorld!";
+// console.log(stringWithTab);
+// // Output: Hello    World!
+
+// let quoteString = "He said, \"Hello!\"";
+// console.log(quoteString);
+// // Output: He said, "Hello!"
+// Summary for Job-Readiness:
+// Strings are essential for manipulating text and handling data in JavaScript.
+// Template literals allow cleaner, more readable code, especially when working with dynamic strings.
+// Escape sequences help you manage special characters and formatting within strings.
+// In most job environments, JavaScript developers use these features regularly for tasks like creating dynamic content, handling user input, and managing text formatting.
+
+// Aapko in concepts ko practice karna zaroori hai, jaise variables ko string ke saath concatenate karna, template literals ka use karna, aur escape sequences ka sahi use samajhna.
+
+// Agar koi part clear nahi hai ya koi aur example chahiye, toh batao! -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let string = "Prabhat";
+        console.log(`The name is \"${string}\"`)
+        let name = "Harry"
+// console.log(name.length)
+console.log(name[0])
+console.log(name[1])
+let friend = 'Prakash'
+console.log(friend)
+// let myfriend = "Shubh' // Dont do this
+// console.log(myfriend)
+
+// Template literals
+let boy1 = "Pramod"
+let boy2 = "Nikhil"
+// Nikhil is a friend of Pramod
+let sentence = `${boy2} is a friend of ${boy1}`
+console.log(sentence)
+
+// Escape Sequence Characters
+// let fruit = 'Bana\'na'
+// console.log(fruit)
+let fruit = "Bana\"na"
+console.log(fruit)
+    </script>
+</body>
+</html>
