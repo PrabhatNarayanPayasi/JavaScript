@@ -1,0 +1,101 @@
+<!-- Map, Filter, aur Reduce ko samajhna aur use karna ek important skill hai programming mein, especially jab aapko functional programming concepts ko efficiently apply karna ho. Ye concepts mostly array ya list processing ke liye use hote hain.
+
+Main aapko in teeno concepts ko simple tareeqe se samjhaata hoon:
+
+
+===========================================================================
+1. Map
+Map ek function hai jo ek array ko dusre array mein convert karta hai, 
+jahan har element par ek function apply kiya jaata hai.
+
+Example:
+Agar aapke paas ek list hai aur aapko har element
+ ko double karna ho, to aap map ka use kar sakte hain.
+
+let numbers = [1, 2, 3, 4, 5];
+let doubled = numbers.map(x => x * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]
+==========================================================================================
+
+
+===================================================================================
+2. Filter
+Filter ek function hai jo ek array ko filter karke ek nayi array return karta hai.
+ Filter aapko wo elements return karta hai 
+ jo ek specific condition ko meet karte hain.
+
+Example:
+Agar aapko sirf even numbers chahiye ho to filter use karenge:
+
+let numbers = [1, 2, 3, 4, 5];
+let evenNumbers = numbers.filter(x => x % 2 === 0);
+console.log(evenNumbers); // [2, 4]
+============================================================================
+
+
+
+
+=====================================================================
+
+3. Reduce
+Reduce ek array ke elements ko ek single value mein reduce karta hai. 
+Isme ek accumulator hota hai jo puri process mein value ko store karta hai.
+
+Example:
+Agar aapko array ke elements ka sum nikaalna ho to reduce use karenge:
+
+
+let numbers = [1, 2, 3, 4, 5];
+let sum = numbers.reduce((acc, x) => acc + x, 0);
+console.log(sum); // 15
+
+=====================================================================
+
+Tips:
+Map har element pe ek function apply karta hai aur nayi list deta hai.
+Filter sirf un elements ko return karta hai jo condition meet karte hain.
+Reduce array ke elements ko ek single value mein convert karta hai.
+Agar aapko koi specific question ho ya examples chahiye ho, toh bataiye! -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ar = [3,2,6,1,4,2,"Prabhat","Developer"];
+       ar.map((i)=>{
+             console.log(i)
+         })
+
+
+      //  console.log("This is Filter method")
+
+
+       // ar.filter((i)=>{
+          //  if(i>2){
+          //      console.log(i)
+          //  }
+       // })
+let arr  = [1,2,3,4,56,]
+let data = arr.filter((i)=>{
+    if(i>3){
+        return i;
+    }
+})
+console.log(data)
+       // ar.reduce((acc,cv)=>{
+        //     console.log( acc , cv+1)
+       // } , 3)
+       let numbers = [1, 2, 3, 4, 5];
+       let sum = numbers.reduce((a,x) => a + x, 0);
+       console.log(sum); // 15
+    </script>
+</body>
+</html>
