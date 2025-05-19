@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let students = [
+            { name: "coco", age: 20, city: "New York" },
+            { name: "wld", age: 21, city: "London" },
+            { name: "ryn", age: 22, city: "Chicago" }
+        ];
+        console.table(students);
+        console.log("Hello");
+        console.warn("Warning");
+        console.error("Error Aayi");
+        console.count("hello")
+        console.time("Time taken by for loop");
+        for (let i = 1; i <= 10000; i++) {
+            console.log(i);
+        }
+        console.timeEnd("Time taken by for loop");
+        console.time()
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        console.timeEnd()
+        //   console.time("Time taken by while loop");
+        //  let i = 1;
+        //  while(i <= 10000) {
+        //      console.log(i);
+        //      i++;
+        // }
+        // console.timeEnd("Time taken by while loop");
+        console.count("Hello");
+        console.count("Hello");
+        console.count("Hello");
+    </script>
+
+
+
+    <!-- 
+    console object JavaScript mein ek built-in object hai jo mainly debugging aur development ke dauran console output dikhane ke liye use hota hai. Ye web browser (jaise Chrome, Firefox) ya Node.js environment mein available hota hai.
+JavaScript mein console ka use aap apne code ki execution ko track karne, errors ko diagnose karne, aur output ko log karne ke liye karte hain.
+
+
+
+Common Console Methods
+console.log():
+
+Sabse zyada use hone wala method hai.
+Yeh aapko console pe messages, variables, objects ya values print karne ki suvidha deta hai.
+Example:
+let name = "Prabhat";
+console.log(name);  // Output: Prabhat
+
+
+
+
+console.error():
+
+Yeh method aapko error messages ko print karne ke liye use hota hai.
+It helps you to highlight errors in the code. In most cases, error messages red color mein show hote hain.
+console.error("This is an error message");
+
+
+
+console.warn():
+
+Yeh method warning messages ko print karne ke liye use hota hai.
+Warnings generally yellow color mein show hoti hain.
+console.warn("This is a warning message");
+
+
+
+console.table():
+
+Agar aapko data ko table format mein dekhna ho, toh console.table() use kiya jaata hai.
+Yeh arrays aur objects ko visually structured form mein print karta hai, jo debugging ke dauran helpful hota hai.
+
+let users = [
+    { name: "John", age: 30 },
+    { name: "Jane", age: 25 }
+];
+console.table(users);
+
+
+
+
+console.assert():
+
+Yeh method condition ke basis par error ko print karta hai agar condition false hoti hai.
+Agar assertion (condition) fail ho jaati hai, toh error print hota hai
+
+let x = 5;
+console.assert(x > 10, "x is not greater than 10");  // This will print the error message
+
+
+
+let x = 5;
+console.assert(x > 10, "x is not greater than 10");  // This will print the error message
+
+
+
+
+
+console.group() and console.groupEnd():
+
+Yeh methods console pe grouped output ko print karte hain. Aap different log statements ko ek group mein organize kar sakte hain.
+console.group() output ko group karne ka start hai, aur console.groupEnd() group ka end hota hai.
+
+console.group("User Details");
+console.log("Name: John");
+console.log("Age: 30");
+console.groupEnd();
+
+
+
+
+
+console.count():
+
+Yeh method kisi particular label ka count karta hai, jo ki aapke debugging ke dauran kitni baar ek block execute ho raha hai, isse track karne mein madad karta hai.
+console.count("Function call");
+console.count("Function call");
+console.count("Function call");
+// Output: Function call: 1, Function call: 2, Function call: 3
+
+
+
+
+
+
+console.time() and console.timeEnd():
+
+Yeh methods performance monitoring ke liye use hoti hain.
+console.time() se ek timer start hota hai aur console.timeEnd() se timer ko end karte hain, aur time difference ko console pe print karte hain.
+
+console.time("Timer");
+// Some operation
+for (let i = 0; i < 1000; i++) {
+    let x = i * i;
+}
+console.timeEnd("Timer");  // Output: Timer: <time in ms>
+
+
+
+
+
+
+
+
+    console.clear():
+
+Yeh method console ko clear karta hai, yani ki purana output ya logs remove kar deta hai.
+Example:
+ 
+console.clear();  // This will clear the console logs
+
+
+
+
+console Object ka Use Case
+JavaScript mein console object ko mainly debugging aur logging ke liye use kiya jata hai. Aap apne application ka flow samajhne ke liye variables, conditions, or results ko track karne ke liye console methods ka use kar sakte hain.
+
+Job-Ready Applications:
+Debugging Code: Jab aap code likh rahe hote hain, to aap console.log() ya console.error() ka use karke apne code ka flow track kar sakte hain. Agar koi bug ya error aata hai, toh aap easily locate kar sakte hain.
+
+Performance Tracking: console.time() aur console.timeEnd() se aap apne functions ya loops ke performance ko track kar sakte hain. Yeh especially important hai jab aapko performance issues ko solve karna ho.
+
+Organized Logging: console.group() aur console.groupEnd() ka use karke aap apne logs ko organized aur readable bana sakte hain, jo large codebases mein useful hai.
+
+Monitoring Function Calls: console.count() ka use karke aap function calls ki count kar sakte hain, jo debugging mein help karta hai, jab aapko yeh dekhna ho ki koi function kitni baar call ho raha hai.
+
+Data Visualization: console.table() ka use karke aap data ko visually structured format mein dekh sakte hain, jo aapko quickly data ko analyze karne mein help karta hai.
+
+Conclusion:
+console object JavaScript mein ek essential tool hai, jo aapko apne code ko efficiently debug karne aur analyze karne mein madad karta hai. Aapke job-ready skills mein debugging aur performance optimization ka part bhi hota hai, aur isme console methods ka use aapke liye kaafi helpful hoga.
+
+
+    -->
+
+</body>
+
+</html>
