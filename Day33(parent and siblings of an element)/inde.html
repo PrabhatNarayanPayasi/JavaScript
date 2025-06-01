@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParentNode vs ParentElement</title>
+</head>
+<body>
+    <div class="container">
+        <p>pres</p>
+        
+        <p>Hello World</p>
+       
+        Text after p
+        <p>Sibling</p>
+    </div>
+
+    <script>
+        // Get the first text node (whitespace before <div> element)
+        //let textNode = document.body.firstChild;
+console.log(document.body.firstElementChild.firstElementChild.parentElement)
+        // parentNode will return the parent element <body>
+        //console.log("parentNode:", textNode.parentNode); // <body>
+
+        // parentElement will return null, because the parent of text node is not an element
+        //console.log("parentElement:", textNode.parentElement); // null
+
+        // Now access the text node inside <p>
+     //   let paragraphTextNode = document.querySelector('p').firstChild;
+
+        // parentNode will return <p> because text inside <p> is a text node
+       // console.log("parentNode of text inside <p>:", paragraphTextNode.parentNode); // <p>
+
+        // parentElement will return <p> because the parent of the text node is an element node
+       // console.log("parentElement of text inside <p>:", paragraphTextNode.parentElement); // <p>
+   
+    </script>
+</body>
+</html>
