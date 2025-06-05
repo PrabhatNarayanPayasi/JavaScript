@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p id="para1">Hello para</p>
+        <p class="class1">This is class1</p>
+        <p class="class1">This is para3</p>
+        <p id="rd">This is 3rd para</p>
+        <div id="rd">2nd rd</div>
+    </div>
+    <script>
+     //  let a =  document.getElementById("para1");
+ //let b =  (document.querySelector(".class1"))
+// let c = document.getElementsByTagName("p");
+ //b.style.color = "red";
+ //for(let i=0; i<c.length; i++){
+   // c[i].style.color="blue"
+ //}
+//let array = Array.from(c)
+ //for(let i of array){
+  //  i.style.color = "blue";    // getElementsByTagName aur GetElementsByClassNAme html collection return karti hai jisme direct for_of ka use nhi hota hai balki nodelist m hota hia isliye isme hamne Array.from ka use kiya h to convert HTMLcollection to the Arrray
+ //}
+//c.style.color = "blue"; 
+
+
+
+
+
+/*
+let d = document.getElementsByClassName("rd")
+for(let i=0; i<d.length; i++){
+    d[i].style.color="pink"   // isko keval loop ya indexing ke through hi access kar skte hai directly nhi.
+}  */
+
+let a = document.querySelector(".class1");
+a.style.backgroundColor = "red";
+let b = document.getElementById("rd");
+b.style.backgroundColor = "blue";
+    </script>
+</body>
+</html>
+
+
+
+<!-- get elements by class name  ka use Karke Ham Keval indexing ya loop ke through Hi chijon Ko access kar sakte hain directly access nahin kar sakte hain ISI Karan se iska use development mein jyada efficient Nahin hota hai mainly Veri select Veri select all ka use Kiya jata hai -->
+ <!-- getelementsbytagname bhi same isi ke jaise work karta hain -->
