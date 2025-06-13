@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Todo App</h1>
+   
+        <input placeholder="Enter your task">
+        <button>Add it in the list</button>
+   
+    <ul>
+        <li>One <button class="delete">Delete</button></li>
+        <li>Two <button class="delete">Delete</button></li>
+    </ul>
+    <script>
+        let input = document.querySelector('input');
+        let btn = document.querySelector('button');
+        let ul = document.querySelector('ul');
+        
+        btn.addEventListener('click', () => {
+            let newli = document.createElement('li');  
+            newli.innerText = input.value;
+            
+            let delbtn = document.createElement('button');
+            delbtn.innerText = "Delete";
+            delbtn.classList.add("delete");
+            
+            newli.appendChild(delbtn);
+            ul.appendChild(newli);
+            
+            input.value = "";
+        });
+        
+        // Event delegation: ul ke parent element par event listener lagana
+        ul.addEventListener('click', (event) => {
+         if (event.target && event.target.classList.contains('delete')) {
+                console.log("Deleted");
+              let liToRemove = event.target.closest('li');
+                liToRemove.remove();  // List item ko remove karna
+           }
+        });
+  // jab ham kabhi apne page me event litener lagate h to vo existing vale me apply hote hai 
+  // naye vale added element pe apply nhi hote hai.
+  //matlb agar hamare pass li tags hai aur agar hamne inke liye event listener lagaya hua hai already
+  // aur phir ham dynamic li tag bnate hai to hame jo event listener pehle vale li
+  //tags k liye lagaya tha to vo event listener naye vale li par apply nhi hoga. agar hamk chahteb h ki
+  // vahi EL apply ho jaye to ham event delegation ka use karte hai     
+
+    </script>
+</body>
+
+</html>

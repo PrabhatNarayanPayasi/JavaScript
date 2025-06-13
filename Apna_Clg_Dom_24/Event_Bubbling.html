@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 400px;
+        height: 800px;
+        background-color: pink;
+    }
+
+    ul {
+        width: 400px;
+        height: 250px;
+        background-color: blue;
+    }
+
+    li {
+        width: 400px;
+
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <!-- jab bhi ham apne html ke andar bahot sare nestd elements ke liye
+    event listener apply karte hai to isko event bubbling kehte hai.  
+    -->
+
+    <div>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </div>
+
+    <script>
+        let div = document.querySelector('div');
+        let ul = document.querySelector('ul');
+        let lis = document.querySelectorAll('li');
+
+        div.addEventListener('click', () => {
+            console.log("Div was Clicked");
+        });
+
+        ul.addEventListener('click', (event) => {
+            event.stopPropagation();
+            console.log("ul was Clicked");
+        });
+        for (let li of lis) {
+            li.addEventListener('click', (event) => {
+                event.stopPropagation();
+                console.log("li was Clicked");
+                // matlb jab nested element pe event listener apply karenge to uske 
+                // parent element pe jo eventlistener apllied hai vo bhi execute ho jayenge.
+            });
+        }
+// is event bubbling ko rokne ke liye hum stoppropogation method ka use karenge isse event bubbling jo hgo rhi hai 
+ // vo ruk jati hai.
+    </script>
+</body>
+
+</html>
