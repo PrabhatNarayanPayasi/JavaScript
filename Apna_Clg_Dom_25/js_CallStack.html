@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello(){
+            console.log("Inside hello . ")
+            console.log("Hello");
+        }
+   function demo(){
+    console.log("Inside demo hello calling");
+    hello();
+   }
+   console.log("Demo is calling");
+   demo();
+   console.log("All function executed . ");
+    </script>
+</body>
+</html>
+
+<!-- 
+jab bhi ham js m function ko call karte hai to js m callstack bnta hai.
+callstack = call+stack
+isme jo function pehle call hota hai vo pehle stack me jata hai fir 
+jo agla function call hota h vo bhi baad m jata h stack me jab function execute ho jate hai to vo removew ho jate hai callstack se.
+-->

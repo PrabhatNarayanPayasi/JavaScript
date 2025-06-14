@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       // function saveDb() {
+            //  let net = Math.floor(Math.random()*10)+1;
+            // if(net>=5){
+            //    console.log("Saved");
+            //}
+            // else{
+            // console.log("Slow Speed");
+            // }
+
+            //    }
+            //   saveDb();
+
+            function saveDb(data) {
+                return new Promise((resolve, reject) => {
+                    let num = 6
+                    if (num >= 5) {
+                        resolve("SUccess")
+                    }
+                    else {
+                        reject("Weak Connection");
+                    }
+                })
+            };
+            saveDb("apna clg");
+    </script>
+</body>
+</html>

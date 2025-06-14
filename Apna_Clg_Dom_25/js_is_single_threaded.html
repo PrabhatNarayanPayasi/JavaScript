@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10;
+        console.log(a);
+        let b = 15;
+        console.log(b);
+        console.log(a+b); //js me ham ek time pe multiple kaam nhi karva skte hai ek time pe js ek hi kaam kar skti hai
+        //yahi matlb h single threaded ka . matlb keval ek hi cjeej pe dhyan dena
+        //isi nature se deal karne ke liye hamare pass ek method h callbacks
+        setTimeout(()=>{
+            console.log("Apna Collage");
+        },2000);
+        console.log("hello")
+        // lekin ye to galat ho gya fir ki agar js single threaded hai to multiple task ek sath kaise kar pa rhi hai .
+        //to ans hai h ki ye js nhi blki hamara bwoser karva raha hai.
+        //js single threader ai lekin browser nhi browser generalyy c++ ke andar likhe jate hai.
+        //jaise hi 2sec ho jayenge to browser settimeout ke code ko js callstack ke andar add kardega.
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function one(){
+            return 1;
+        }
+        function two(){
+            return (one() + one());
+        }
+        function three(){
+            let ans = two() + one();
+            console.log(ans);
+        }
+        three();
+    </script>
+</body>
+</html>
+
+<!-- browser ka jo call stak hota hai use ham browser ke through bhi track kar skte hai with the help of break points.
+ matlb agar hamare pass ek bada sa code hai aur use execute use ham dekhna chahte haia ki lines kaise execute hongi to hum usme breakpoints laga skte hai
+   -->
