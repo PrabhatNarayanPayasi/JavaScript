@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input>
+    <button>Click</button>
+    <script>
+        let btn = document.querySelector('button');
+        let inp = document.querySelector('input');
+        inp.addEventListener('keydown' , (e)=>{
+            console.log(e.key);
+            console.log(e.code);
+            if(e.code=="ArowUp"){
+                console.log("Arrow moved forward")
+            }
+            else if(e.code=="ArrowDown"){
+                console.log("Arrow Down Clicked")
+            }
+            else if(e.code=='ArrowLeft'){
+                console.log("Arrowleft clicked ")
+            }
+           else{
+            console.log("Arrow right clicked")
+           }
+        })
+
+    </script>
+</body>
+</html>
+
+<!-- 
+
+ye jo e ya event object hoti hai ye hame eventlistener ko bahot sari information de deti hai
+jiska use keyboard event listener ke liye kiya jata hai.
+
+
+isme do chhej jada importsnt hoti h jisme ye dikhata h ki code kya h doosra key mtlb value kya hai
+
+-->

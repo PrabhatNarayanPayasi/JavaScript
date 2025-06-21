@@ -1,0 +1,241 @@
+<!--    
+
+
+
+===================================DOM Events==========================
+basic inline styling i gyai h isme.
+<button onCLick="console.log("Button Was Clicked")">Click Button </Button>
+
+===============================Mouse_pointer Events====================
+
+yadi kisi object ke baare me uski method ke bare m information chahiye hoti hai to console.dir
+karte hai . 
+
+jab ham chahte hai h ki onclick ya aur baaki property se sirt ek chhej hi print ho
+to uske liye onlick ya basic fnction ka use karte hai
+agar ham chahte he ki multiple cheeje print ho
+to phir ham EventListener ka use karte hai. 
+ 
+=============================Evnet Listener====================
+
+obj.addEventListener("click" , function(){
+console.log("Hello")
+})
+
+EventListener do args leta hai ek to function ka naam aur doosra callback ya normal funcion
+ek single object ke liye multiple eventlistener laga skte h jo ki advantage h over onclick value ki ham multiple property set nhi kar skte hai.
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <button>Click me </button>
+    <button>Click me </button>
+    <button>Click me </button>
+
+    <button>Click me </button>
+    <button>Click me </button>
+
+ <script>
+    let btns = document.querySelectorAll("button");
+
+    for(let btn of btns){
+        btn.addEventListener("click" ,()=>{
+            hello();
+            by();
+        })
+    }
+  
+function hello(){
+    alert("    Hello")
+}
+function by(){
+    console.log("By")
+}
+ </script>
+
+</body>
+
+ </html>
+
+ 
+====================ACTIVITY - RANDOM COLOR GENERATE=================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+</head>
+<style>
+    body{
+        text-align: center;
+         
+    }
+    .box{
+    width:80%;
+    height:33%;
+    border:1px solid black;
+    margin:auto;
+}  
+
+</style>
+<body>
+    <h3>Gnerate A Random Color</h3>
+    <button>GEnerate</button>
+    <div class="box">This is new color</div>
+    <script>
+        let btn = document.querySelector("button");
+        let h3 = document.querySelector('h3');
+let div = document.querySelector('div');
+        btn.addEventListener('click' ,()=>{
+         color();
+
+        });
+        function color(){
+          let red =   Math.floor(Math.random()*255)+0
+          let green =   Math.floor(Math.random()*255)+0
+          let blue =   Math.floor(Math.random()*255)+0
+
+          let c = `rgb(${red} , ${green} , ${red})`
+          h3.innerText = c;
+div.style.backgroundColor = c; 
+
+        }
+    </script>
+</body>
+</html>
+
+ 
+=================================EVENTlISTENERS ON ELEMENTS===========================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello
+
+    </p>
+    <script>
+        let p = document.querySelector('p');
+        p.addEventListener('click' , ()=>{
+            body.style.backgroundColor = "red";
+        })
+    </script>
+</body>
+</html>
+
+ 
+ 
+
+
+
+  =================================This in event listener===================
+ 
+ this in event listener vahi cheej h jiske liye ham eventlistener laga rhe hai jaise
+ agar jo code hai
+<btton>CLick</button>
+    let btn = document.querySeletor('button');
+    btn.addEventListener('click' , ()=>{
+    console.log(btn) // to poora ka poora button tag hi print ho jayega.
+    console.dir(btn) //isse poori button object print ho jayegi aur iske unde jitni bhi method hongi vo sb aa jayengi
+    })
+
+    iska ek use case ye bh h ki agar jaise hamare 
+pass multiple elements h to agar ham har ek liye eventlistener lagayenge to jada time lagega 
+aur code ke under redundancy bhi aa jayegi 
+to is redundancy ko hatane ke liye ham likhe skte hai this vala logic 
+Here is a code for better explanation of this in eventListener :-  
+
+
+  
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>This is p</p>
+    <h4>This is h4</h4>;
+    <button>This is Button</button>
+    <script>
+        let h1 = document.querySelector('h1');
+        let p = document.querySelector('p');
+        let h4 = document.querySelector('h4');
+        let btn = document.querySelector('button');
+        /*ye code redundancy vala hai
+        h1.addEventListener('click' , ()=>{
+            h1.style.backgroundColor = "blue";
+        })
+        p.addEventListener('click' , ()=>{
+            h1.style.backgroundColor = "blue";
+        })
+       h4.addEventListener('click' , ()=>{
+            h1.style.backgroundColor = "blue";
+        })
+       btn.addEventListener('click' , ()=>{
+            h1.style.backgroundColor = "blue";
+        })
+*///iski jageh seedhe this ka use karo
+function color(){
+    this.style.backgroundCOlor = "blue";
+}
+h1.addEventListener('click' , color);
+p.addEventListener('click' , color);
+h4.addEventListener('click' , color);
+btn.addEventListener('click' , color);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>This is p</p>
+    <h4>This is h4</h4>;
+    <button>This is Button</button>
+    <script>
+        let h1 = document.querySelector('h1');
+        let p = document.querySelector('p');
+        let h4 = document.querySelector('h4');
+        let btn = document.querySelector('button');
+        /*ye code redundancy vala hai
+        h1.addEventListener('click' , ()=>{
+            h1.style.backgroundColor = "blue";
+        })
+        p.addEventListener('click' , ()=>{
+            h1.style.backgroundColor = "blue";
+        })
+       h4.addEventListener('click' , ()=>{
+            h1.style.backgroundColor = "blue";
+        })
+       btn.addEventListener('click' , ()=>{
+            h1.style.backgroundColor = "blue";
+        })
+*/
+function color(){
+    this.style.backgroundCOlor = "blue";
+}
+h1.addEventListener('click' , color);
+p.addEventListener('click' , color);
+h4.addEventListener('click' , color);
+btn.addEventListener('click' , color);
+    </script>
+</body>
+</html>

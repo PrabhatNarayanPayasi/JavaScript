@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action"><h1>HELLO</h1>
+        <input id="user" placeholer="Userrname">
+        <input placeholder="password" id="password">
+        <button>Resister</button>
+    </form>
+    <Script>
+        let form = document.querySelector('form');
+        form.addEventListener('submit' , ()=>{
+           event.preventDefault();
+          //  console.log("Form submitted");
+          //  let inp = document.querySelector('input');
+            
+          //  console.dir(inp.value)
+             
+            //    alert(`your input value is ${inp.value}`)
+          //  console.log(form.elements[0]);
+       // console.log(i)
+        })
+
+// ================================Change Events======================
+       let user = document.querySelector('#user');
+       let pass = document.querySelector('#password');
+//user.addEventListener('change' , ()=>{
+  //  console.log("Change occurd" , user.value)
+    // change event har ek input ko track nhi karta hahi ye keval kisi input ki 
+    //final aur initial state kotrack karta hai 
+//agar ham chahte hai ki har ek input ki state ko track kare to fir
+//input event ka use kar skte hai
+//ek aur baat ki non character key input event ko track nhyi karti hai.
+//
+//})
+
+// input event
+
+//user.addEventListener('input' , ()=>{
+    console.log('input event ' , user.value)
+//})
+
+// Activity
+let body = document.querySelector('body');
+let h1 = document.querySelector('h1')
+
+
+//user.addEventListener('input' , ()=>{
+  /////  h1.innerText = user.value;
+   //// console.log(user.value)
+//})
+    
+
+
+
+// ye ho gaya change event .
+user.addEventListener('change' ,()=>{
+    h1.innerText = user.value;
+})
+        //})
+    </Script>
+    <!-- Agar ham chahte ki form ki values ko extract kare to unse diff diff action
+     bhi perform kar skte hai ham form ki value ko extract karke -->
+
+
+
+
+
+
+<!--  -->
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action">
+<input placeholder="usertname">
+<button>Resister</button>
+    </form>
+    <script>
+        let form = document.querySelector('form');
+        form.addEventListener('submit' , (event)=>{
+            event.preventDefault();
+            console.log("Form submiteed")
+        })
+    </script>
+
+    <!-- jab bhi hame chahte h ki jo default cheeje h vo execute na ho 
+     to ham event.preventdefault likh derte hai -->
+</body>
+
+</html>
