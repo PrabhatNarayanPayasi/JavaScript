@@ -1,0 +1,67 @@
+<!--
+
+Getattribute aur setattribute se ham kisi html tag ke andar jo attribute hai unko
+get karke change kar skte hai . jaise hamare pass ek img tag hai
+<img src="" id="main">
+to is img tag m do attribute hai ek to hai src aur doosra hai id .
+to iske attribute ko access karne ke liye.getAttribute() aur .setAtrribute() bhi kar skte hai
+isse attribute ko  set karne ke baad agar id ya class change hoti hai to 
+iski stylng bhi change ho sakti hai.
+eeche poora ka poora html aur script code hai iske liye . 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width:400px;
+        height:500px;
+        background-color: blue;
+    }
+    .boxx{
+     margin-top:400px;
+     margin-left:250px;
+        width:200px;
+        height: 200px;
+        border-radius: 50%;
+        border:1px solid white;
+        border-top:4px solid black;
+animation: rotate 1s ease-out infinite;
+    }
+    @keyframes rotate{
+         
+            0%{
+transform: rotate(0deg);;
+            }
+            
+            100%{
+    transform:rotate(360deg);
+            }
+        
+      
+    }
+
+
+     
+</style>
+<body>
+    <div class="box"></div>
+    <button>See the loader</button>
+    <script>
+        let box1 = document.getElementsByClassName("box")[0]
+       console.log(box1.getAttribute("class"))
+       console.log(box1.getAttribute("id"));
+let btn  = document.getElementsByTagName("button")[0]
+btn.addEventListener("click" , ()=>{
+    box1.setAttribute("class" , "boxx")
+})
+       
+    </script>
+</body>
+</html>

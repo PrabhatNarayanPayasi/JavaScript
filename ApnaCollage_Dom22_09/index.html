@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus harum maiores obcaecati. Quod dolore non laudantium vitae impedit consectetur.
+    </p>
+    <button id="btn">Change Content</button>
+    <button id="prev">prev button</button>
+    <script>
+        let para = document.getElementById("para")
+        let btn = document.getElementById("btn")
+btn.addEventListener("click" , function(){
+    para.innerHTML = "Prabhat Narayan Payasi"
+})
+let btn2 = document.getElementById("prev");
+btn2.addEventListener('click' , ()=>{
+    para.innerHTML = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus harum maiores obcaecati. Quod dolore non laudantium vitae impedit consectetur."
+})
+  
+    </script>
+</body>
+</html>

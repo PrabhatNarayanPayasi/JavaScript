@@ -1,0 +1,33 @@
+<!--
+
+kisi bhi object ki class ko check karne ke liye 
+ham obj.classlist se find aur update kar skte hai
+  
+
+
+
+-->
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    .heading{
+        color:blue;
+    }
+  </style>
+  <body>
+    <h1 class="h1">Hello Web Developer</h1>
+    <script>
+        let h = document.querySelector("h1");
+      //  console.log(h.classList);
+      h.classList.add("heading")
+      h.classList.remove("h1")
+    </script>
+  </body>
+  </html>

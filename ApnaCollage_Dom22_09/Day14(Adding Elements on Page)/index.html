@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 100vw;
+        height: 100vh;
+        background: pink;
+
+    }
+
+    .div1 {
+        width: 80%;
+        height: 50%;
+        border: 1px solid black;
+        background-color: blue;
+
+    }
+</style>
+
+<body>
+    <h1>Helo Developer !! </h1>
+    <div class="container"></div>
+    <script>
+        let h1 = document.querySelector("h1");
+        let np = document.createElement('p');
+        //   let body = document.querySelector('body');
+        //  body.appendChild(np);
+        //  body.append(np)
+        //   np.innerText  = "This is new Para created by me"
+        // let btn = document.createElement("button");
+        //   h1.insertAdjacentElement('beforeBegin' , btn)
+        //h1.insertAdjacentElement('afterBegin' , btn)
+        // h1.insertAdjacentElement("beforeEnd" , btn)
+        // h1.insertAdjacentElement('afterEnd' , btn);
+
+        //=============================REMOVE/REMOVECHILD===================
+        // ham  generaly removemka hi use kar rhe honge as compare to remove child    
+
+        //btn.remove();
+
+
+
+        //=============================PRACTIC QUESTION DAY16====================
+        let container = document.querySelector('.container');
+        let p = document.createElement('p');
+        p.innerText = "Hey i am red";
+        p.style.color = "red"
+        container.append(p)
+
+        let h3 = document.createElement('h3');
+        container.append(h3);
+        h3.innerText = "I am blue h3";
+        h3.style.color = "blue";
+        container.append(h3);
+        //p.insertAdjacentElement()
+
+
+        let div = document.createElement('div');
+        container.append(div);
+        div.classList.add('div1');
+        let h = document.createElement('h1');
+        h.innerText = "I am in div";
+        div.append(h);
+        let p1 = document.createElement('p');
+        p1.innerText = "I am in div too";
+        div.append(p1);
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+apend se ham usielement ke under change kar skte hai jabki append child se kisi  element ke child ke liye node create kar skte hai.
+ham append ko hi generaly use karte hai agar ham aakisi element ko kisi element ke pehle add karna chahte h to prepend kause karenge.
+
+insertAdjacent ka ues karke ham kisi element ko starting m add kar skte hai.
+insertAdjacentElement(where , element)
+-->
