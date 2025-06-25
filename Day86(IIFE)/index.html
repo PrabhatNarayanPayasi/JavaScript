@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //IIFE function wo function hote hai jinhe turant immidiatly call kiya ja skta ahi bina explicit call
+ //kiye . iska use ham tab karte hai jab hame global scope ko clear rakhna ho 
+ //syntax
+ (()=>{
+    //code
+ })(); //ye ek function exression hai jab bhi ham function ko () ke andar likhte hai to vo function expression ban jata hai . 
+//iske  baad jo () hai ye immidiatly call kar rha hai function ko yahi hai Imidiatly invoked function
+
+//usecase
+//Encaptulation of code from global scope isse global scope me variables pollute nhi hote hai 
+//jiase
+(function(){
+    let a= 10;
+    console.log(a);
+})();
+//console.log(a)
+
+//agar hame temporary variable bnani ho jo global scope me accessible na ho to IIFE ka use karenge
+//jaise hame agar koi code ek baar turant chalana ho to IIFE ka use kar skte hai 
+
+/*
+Local Scope Creation:
+IIFE ke through hum variables ko local scope mein rakh sakte hain, jo global scope mein pollute hone se bach jate hain.
+
+
+Avoiding Conflicts:
+Jab multiple libraries ya functions same global names ka use karte hain, to IIFE se hum unko isolate kar sakte hain.
+
+
+Modular Code:
+
+IIFE se hum apne code ko modular aur well-encapsulated bana sakte hain.
+Initialization: Jab hume libraries ya plugins ko turant initialize karna ho.
+*/
+//parameter
+((a,b)=>{
+    console.log(a+b);
+})(6,8)
+    </script>
+</body>
+</html>
