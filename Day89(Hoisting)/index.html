@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //hoisting matlb hai ki jab bhi ham variable ko neeche declare akrte hai to vo automatically ooper declare hota hua prateet hota hai . 
+    // ye sb run time se pehle hota hai during the compilation phase.
+//ye do type ki hoti hai variable aur functional hoisting . 
+// variable me unki value ko undefined print kiya jata hai unnke assignment tak 
+// jiase :
+/*var a ;
+console.log(a)
+ a = 10;
+console.log(a);
+*/
+ 
+//console.log(a)
+  //let a = 10; // referance error deta hai ye TDZ(Temporarel dead zone)
+//<!-- ye chala gya Temporarel Dead Zone me  -->
+ // console.log(a);
+ 
+ 
+//console.log(a)
+ const a = 10;
+console.log(a);
+// const ke caseme error aati hai syntax error kyoki const me turant value jaani hoti hai 
+
+
+//Functional Hoisting 
+//ye poore function ki body ke sath hoist hota hai
+hello();
+function hello(){
+    console.log("hello")
+}
+name(); // yaha pe err dega ki name variable ko access nhi kiya ja pa rha before initializTION.
+//function hoisted hote hai lekin function expresion hoist nhi hote hai .
+//class expression  bhi hoisted nhi hote hai . 
+let name = function n(){
+    console.log("Name")
+}
+//name(); // ye ek function expression hai jo ki hoist nhi hota hai .  -->
+//js only hoist declaration not initialization isliye ye undefined ya err deta hai jab tak assignment ki line reaached nhi hoti hai .
+
+</script>
+</body>
+</html>
+
+
+
+
+<!-- 
+to hame kya ye keh skte hai ki TDZ me ek esa time period hai ye ki jisme let aur onst ki hoisting m hota hai isme delartion to top par chala jata ahi lekin initialization  na mil paane ke karna ye reference error show karta hai .
+ChatGPT said:
+Bilkul! Aapka samajh bilkul sahi hai! 😊
+-->
