@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // closure ki vajeh se inner function apne outer function ke variable ka acces rakh pati hai
+        function outerFunction() {
+            let outerVariable = 'I am from outer function';
+        
+            function innerFunction() {
+                console.log(outerVariable); // inner function can access outerVariable
+            }
+        
+            return innerFunction; // returning the inner function (closure)
+        }
+        
+        const closureExample = outerFunction();
+        closureExample(); // Output: 'I am from outer function'
+         
+    </script>
+</body>
+</html>
+
+<!-- 
+kya m yehi bolu ki ye keval function ke liye hai variable ke liye nhi aur nested function ke liye use kiya jata hai
+ChatGPT said:
+Bilkul! Aap yeh bhi keh sakte hain ki closure sirf functions ke liye hota hai, 
+na ki variables ke liye. 
+Aur haan, yeh concept nested functions me use kiya jata hai,
+yani jab ek function ke andar doosra function hota hai,
+tab closure ka use hota hai.
+-->
+
+<!-- 
+JavaScript mein closure ek powerful concept hai, jo ek function ke andar dusre function ko define karne se related hai. Closure ki wajah se ek function apne lexical scope ko yaad rakh sakta hai, jab woh function call ho jaata hai, chahe woh outer function ka execution context already complete ho chuka ho.
+
+Closure ko Samajhna:
+Closure ko samajhne ke liye humein pehle lexical scoping ko samajhna hoga.
+
+Lexical Scoping ka matlab hai ki ek function apne surrounding scope (i.e., outer function) ke variables ko access kar sakta hai.
+Jab aap ek function ko andar function ke saath define karte hain, toh closure tab create hota hai, jisme inner function apne outer function ke variables ko access kar sakta hai.
+-->
