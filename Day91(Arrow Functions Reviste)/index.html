@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const hello =()=>{console.log("heelo")}
+        const hello1 =(name)=>console.log("heelo "+name)
+        hello();
+        hello1("Prabhat");
+        const greet = (name , greeting) =>console.log(greeting+ name)
+    greet("Shiva" , "Good Morning")
+
+    const x ={
+        name:"Prabhat",
+        role:"developer",
+show:  function show(){
+
+setTimeout(()=>{
+    console.log(`the name is ${this.name} and the role is ${x.role}`) // yaha maine settimeout me arrow function diya hai to vo chal gya 
+    //lekin agar m normal function likhunga to name and role access nhi kar paaunga
+// matlb yaha per settimeout apna this nhi banata ye apne parent se this 
+// le leta hai . yani show function me this to ek object hai isliye 
+// koi dikkat nhi aayegi same value mil jayegi.
+},2000)
+
+// arrow function lexical this ka use karte hai matlb ye apne parent se this ko access karte hai 
+console.log(this) //yaha pe this ek object hai 
+setTimeout(function(){
+    console.log(this) // yaha pe thi ek window hai
+    console.log(`the name is ${this.name} and the role is ${x.role}`);
+},2000)
+        }
+    }
+    //jab kisi object ke andar function hai function keyword ka use karke aur agar us function ke under bhi 
+   //   function bna doge to  this jo h to window object ban jaayga
+ //is problem se overcome karne ke liye arrow function ka use kiya gaya 
+    console.log(x.name , x.role)
+    x.show()
+    </script>
+</body>
+</html>
