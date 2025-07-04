@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //  pring heelo and world after two seconds 
+          
+(
+   function(){
+    setTimeout(()=>{
+        console.log("HEllo")
+    } ,2000)
+ 
+    setTimeout(()=>{
+        console.log("world")
+    } , 4000)
+   
+}
+)();
+
+
+// avg using spread syntax
+function avg(a,b,c){
+    return (a+b+c)/3;
+}
+let x = [1,2,3]
+console.log(avg(...x))
+      
+//simple intrrest calculator
+function simple(p,r,t){
+    return (p*r*t)/100
+}
+console.log(simple(2000,1,4))
+    </script>
+</body>
+</html>
+<!-- var ka  use ES6 se pehle kiya jata tha kisi bhi variable ko
+  declare karne ke liye  kyoki kuchh reason ke kaaran bug ko throughout kiya ja skta hai .
+  -->
